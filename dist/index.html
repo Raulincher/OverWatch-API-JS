@@ -1,0 +1,66 @@
+<!--  
+    Autors: Raúl Luque, Carlos Dalghi, Jan Esteve
+    Date: 
+    Keywords: VUE, HTML, CSS, JS, PW1
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200;0,400;0,500;1,200&display=swap" rel="stylesheet">
+    <title>Overwatch</title>
+</head>
+
+<body>
+  <!-- <header id = "overwatch_header"> </header> -->
+  <header class = "header">
+    <img src="https://1000marcas.net/wp-content/uploads/2020/03/Logo-Overwatch.png" alt="Overwatch Logo" id="logo-overwatch">
+    <h1 id = "title"> OVERWATCH HERO LIST </h1>
+  </header>
+
+  <article id = "app">
+    <div class = "search-space">
+      <heroe-search class = "heroe-search"></heroe-search>
+    </div>   
+    
+      <heroe-info class="heroe-info" 
+        v-for="heroe in overwatch"
+        v-bind:heroe="heroe"
+        v-bind:key="heroe.key">
+      </heroe-info>
+    
+      <script src="./index.js" type="module"></script>
+  </article> 
+
+  <footer class="footer">
+    <div class ="footer-content">
+      <img src="https://1000marcas.net/wp-content/uploads/2020/03/Logo-Overwatch.png" alt="Overwatch Logo" id="logo-overwatch">
+      <p class = "data"> Pràctica 2 - Programació Hipermèdia. Autors: Raúl Luque, Carlos Dalghi i Jan Esteve </p>
+    </div>
+  </footer>
+</body>
+</html>
+
+
+<!--<li v-for="heroe in heroes">
+  {{ heroe.name }}
+  {{ heroe.role }}
+  {{ heroe.portrait }}
+  <button v-on:click="showmore"></button>
+  </li>
+
+          <todo-item
+        v-for="item in groceryList"
+        v-bind:todo="item"
+        v-bind:key="item.id">
+        </todo-item>
+  <heroe-image 
+  v-for="image in overwatch"
+  v-bind:image="image"
+  v-bind:key="heroe.key">
+</heroe-image>-->

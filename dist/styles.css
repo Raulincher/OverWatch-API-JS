@@ -1,0 +1,132 @@
+* {
+    padding: 0; 
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Karla', sans-serif;
+    max-width: 1900px;
+    
+}
+
+.header {
+    display: flex;                              /*He utilitzat el grid per fer el header*/
+    justify-content: space-around;
+    position: sticky;                           /*El header està en posició sticky per tal de mantenir-se tota la pàgina al deslliçar-nos*/
+    z-index: 1;                                 /*Indiquem que esta en un z-index 1, per tal de així sobreposarse a tots els elements al deslliçar-nos per la pàgina*/
+    padding-top: 30px;
+    padding-bottom: 30px;                       
+    background-color: lightblue;                  /*Li posem un color de fons blanc, perquè aixì, al ser sticky, al desplaçar no es vegin les imatges darrera del fons*/
+    color: white                                   /*Poso tots els elements del header de color grey, amb negre crida massa l'atenció*/
+}
+
+.description{
+
+    z-index: 3;
+    background-color: blue;
+
+}
+
+#logo-overwatch {
+    cursor: pointer;
+    height: 90px;
+    width: 150px;
+    margin-left: 0px;
+}
+
+#title {
+    justify-content: flex-end;
+}
+
+#app {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.search-space {
+    position: relative;
+    margin-top: 80px;
+    margin-bottom: 100px;
+    left: 750px
+}
+
+.heroe-search > input {
+    width: 260px;
+    height: 40px;
+    border-radius: 15px;
+    top: 0;
+    left: 0;
+    border: none;
+    position: absolute;
+    background-color:rgb(236, 235, 235); /* Poso un gris que he trobat correcte */
+    padding: 0 20px;  
+}
+
+.heroe-search > input::placeholder {
+    font-size: 13px;
+    font-weight: 600;
+    color: darkgrey;
+}
+
+.heroe-search > button {
+    cursor: pointer;
+    height: 40px;
+    width: 140px;
+    border-radius: 15px;
+    border-style: solid;
+    border-width: thin;
+    border-color:#f6f6f6 ;
+    background-color:rgb(236, 235, 235);
+    position: absolute;  
+    left: 230px;
+    transition: all 0.3s;
+}
+
+.heroe-search > button:hover {
+    color: white;
+    background-color: blueviolet;
+}
+
+.heroe-info {
+    cursor: pointer;
+    position: relative;
+    background-color: rgb(233, 232, 232);
+    align-items: center;
+    margin: 15px;
+    transition: all 0.3s;
+    
+}
+
+.heroe-info:hover {
+    background-color: rgb(214, 212, 212);
+}
+
+.heroe-info div { position: relative; }
+
+.heroe-info p {
+    position: absolute;
+    
+    left: 15%;
+    top: 35%;
+    font-size: 35px;
+    font-weight: 500;
+}
+
+.heroe-info .role { top: 165px; }
+.heroe-info .name { top: 70px; }
+
+
+.footer {
+    margin-top: 50px;
+    display: flex;
+    border-top: 1px solid lightgrey;
+}
+
+.footer-content {
+    padding-top: 20px;
+    margin-left: 30px;
+}
+
+.data {
+    justify-items: flex-end;
+    font-weight: 400;
+}
